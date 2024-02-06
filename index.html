@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/quran-icon.png"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/normalize.css"/>
+    <!--Icon From Font Awesome-->
+    <link rel="stylesheet" href="./css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/093104617b.js" crossorigin="anonymous"></script>
+    <title>Surate WebSite</title>
+</head>
+<body dir=rtl>
+    <main>
+        <img class="lamp" src="./img/design.png" alt="">
+        <div class="container">
+            <div class="desc">
+                <h2>السلام عليكم و رحمة الله و بركاته</h2>
+                <p>الموقع يسمح لك بالاستماع للقران الكريم و الاسترخاء.</p>
+                <span>ملاحظة :</span>
+                <p>عليك الانصات للقران عند تشغيله لقوله تعالى : "وَإِذَا قُرِئَ الْقُرْآنُ فَاسْتَمِعُوا لَهُ وَأَنْصِتُوا لَعَلَّكُمْ تُرْحَمُونَ"</p>
+                <p >اختلف الفقهاء في حكم الإنصات للقرآن حال تلاوته فمنهم من أوجب ذلك وحرم الحديث حال سماعه ومنهم من استحب ذلك وكره الحديث عنده</p>
+                <p class="read-more">للمزيد يمكنك قراءة <a target="_blank" href="http://saaid.org/Doat/binbulihed/f/213.htm">هذا المقال</a></p>
+            </div>
+            <!-- <div class="image"><img src="./img/muslim.png" alt="Quran Picture"></div> -->
+            <!-- <a href="#" class="player-btn">قائمة التشغيل</a> -->
+            <button><h3>قائمة التشغيل</h3></button>
+        </div>
+
+    </main>
+    <div class="playlist">
+        <div class="header-playlist">
+            <div class="container">
+                <div class="image"><img src="./img/quran-icon.png" alt=""></div>
+                <div class="header-info">
+                    <h2>سور القران الكريم</h2>
+                    <p>يمكنك البحث عن السور في الاسفل و الاستماع اليها</p>
+                </div>
+            </div>
+        </div>
+        <div class="main-playlist container">
+            <div class="search-playlist ">
+                <i class="fa-solid fa-play"></i>
+                <input type="text" placeholder="ابحث">
+            </div>
+            <div class="surah-playlist">
+                <div class="surah-box">
+                    <div>
+                        <span class="number">1</span>
+                        <div class="img">
+                            <img src="./img/quran.png" alt="">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <p class="surah">الفاتحة</p>
+                    </div>
+                    <div class="time">2min</div>
+                </div>
+                <div class="surah-box">
+                    <div>
+                        <span class="number">1</span>
+                        <div class="img"><!--relative-->
+                            <img src="./img/quran.png" alt="">
+                            <i class="fa-solid fa-play"></i><!--Absolute-->
+                        </div>
+                        <p class="surah">الفاتحة</p>
+                    </div>
+                    <div class="time">2min</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+</html>

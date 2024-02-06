@@ -1,0 +1,290 @@
+:root{
+    --main-color: #454545;
+    --title-color : #5FB681;
+    --paragraph-color : #E9E9E9;    
+}
+
+body{
+    background-color: #353535;
+
+    /* height: 100vh; */
+    color: var(--paragraph-color);
+}
+
+::selection{
+    color: white;
+    background-color: rgb(0 0 0 / 80%);
+}
+::-moz-selection{ /*For Mozilla Browser*/
+    color: white;
+    background-color: rgb(0 0 0 / 80%);
+}
+
+main{
+    background-color: #353535;
+    background-image: url(../img/pngwing.com.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+main .lamp{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+main .desc{
+    margin-bottom: 30px;
+    cursor: default;
+}
+
+main .desc h2{
+    color: var(--title-color);
+}
+main .desc span{
+    color: var(--title-color);
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration-color: var(--title-color);
+    text-decoration-line: underline;
+}
+main .desc p{
+    margin: 10px 0;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+main .desc .read-more a{
+    text-decoration: none;
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+
+
+main .container button{
+    background-color: transparent;
+    border: 2px solid var(--title-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+main .container button h3{
+    font-family: 'Kufam', sans-serif;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+main .container button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: #3eab69;
+    transition: 0.6s;
+
+}
+
+main .container button:hover::before{
+    width: 100%;
+}
+
+.playlist{
+    height: 100vh;
+    background-color: #141414;
+
+}
+.header-playlist{
+    box-shadow: 1px 1px 5px rgba(0 , 0, 0,25%);
+}
+
+.header-playlist .container{
+    display: flex;
+    gap: 20px;
+    height: 30vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header-playlist .container .image{
+    width: 200px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.header-playlist .container .image img{
+    width: 100%;
+    height: 100%;
+}
+
+.header-playlist .container .header-info h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: var(--title-color);
+}
+
+.header-info p{
+    color: #ccc;
+}
+
+.main-playlist::-webkit-scrollbar{
+    background-color: var(--main-color);
+    color: white;
+    width: 10px;
+}
+
+.main-playlist::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 8px;
+}
+.main-playlist{
+    padding-top: 20px;
+    position: relative;
+    height: 70vh;
+    overflow: auto;
+}
+.main-playlist::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0 , 0, 0,25%);
+    opacity: 0.2;
+}
+.search-playlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+}
+
+.search-playlist i{
+    padding: 20px;
+    background-color: var(--title-color);
+    transform: rotate(180deg);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.search-playlist input{
+    font-family: 'Kufam', sans-serif;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+}
+
+.search-playlist input:focus{
+    outline: none;
+}
+
+.surah-playlist{
+    padding-top: 20px;
+}
+
+.surah-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.surah-box:not(:last-child){
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.surah-box > div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.surah-box  .img{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--title-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.surah-box  .img img{
+    width: 100%;
+    height: 100%;
+}
+.surah-box  .img i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,50%);
+    border: 1px solid var(--title-color);
+    border-radius: 8px;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.7s opacity, 0s z-index;
+}
+
+.surah-box  .img:hover{
+    border: transparent;
+}
+
+.surah-box  .img:hover i{
+    z-index: 1;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .player-btn{
+    text-decoration: none;
+    color: var(--paragraph-color);
+    padding: 10px 15px;
+    border: 2px solid var(--title-color);
+    border-radius: 8px;
+    font-weight: 700;
+    position: relative;
+}
+.player-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: #3eab69;
+    transition: 0.6s;
+    z-index: -1;
+}
+
+.player-btn:hover::before{
+    width: 100%;
+} */
