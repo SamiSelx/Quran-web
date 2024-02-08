@@ -29,7 +29,7 @@ fetch("https://api.quran.com/api/v4/chapters")
               <img src="./img/quran.png" alt="">
               <i class="fa-solid fa-play"></i>
           </div>
-          <p class="surah">${element.name_arabic}</p>
+          <p class="surah">سورة ${element.name_arabic}</p>
       </div>
       <div class="time">2min</div>
   </div>
