@@ -32,6 +32,10 @@ main{
     align-items: center;
     position: relative;
 }
+
+main .container{
+    position: relative;
+}
 main .lamp{
     position: absolute;
     top: 0;
@@ -60,6 +64,14 @@ main .desc p{
     text-align: justify;
 }
 
+@media (max-width:714px) {
+    main .container{
+        text-align: center;
+    }
+    main .desc p{
+        text-align: center;
+    }
+}
 main .desc .read-more a{
     text-decoration: none;
     color: var(--title-color);
@@ -100,7 +112,7 @@ main .container button:hover::before{
 }
 
 .playlist{
-    height: 100vh;
+    min-height: 100vh;
     background-color: #141414;
 
 }
@@ -111,13 +123,22 @@ main .container button:hover::before{
 .header-playlist .container{
     display: flex;
     gap: 20px;
-    height: 30vh;
+    min-height: 30vh;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+@media (max-width:618px) {
+    .header-playlist .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .header-playlist .container .image{
     width: 200px;
+    height: 170.95px;
     border: 2px solid var(--main-color);
     border-radius: 5px;
 }
@@ -185,6 +206,8 @@ main .container button:hover::before{
     border-radius: 8px;
     border: none;
     font-weight: 600;
+    max-width: 200px;
+    width: 100%;
 }
 
 .search-playlist input:focus{
